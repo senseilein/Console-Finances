@@ -123,8 +123,14 @@ for (let data = 0; data < finances.length -1; data++){
 let averageChange = changes.reduce((acc, cum) => acc + cum, 0) / totalNumOfMonths;
 
 
-// Sort array of changes in order to easily extract the greatest increase in profits and the greatest decrese in losses
-let orderedChanges = changes.sort();
+// Clone then sort array of changes in order to easily extract the greatest increase in profits and the greatest decrese in losses
+let orderedChanges = [...changes].sort();
+
+console.log(orderedChanges)
+console.log(changes)
+
+
+
 
 
 console.log(
