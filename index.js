@@ -1,3 +1,10 @@
+/*
+
+
+
+ */
+
+
 var finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
@@ -86,3 +93,14 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+
+// Each item in the dataset corresponds to 1 month 
+let totalNumOfMonths = finances.length;
+
+console.log(
+`Financial Analysis
+----------------------------
+Total Months: ${totalNumOfMonths}
+`
+)
