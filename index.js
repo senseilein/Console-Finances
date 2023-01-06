@@ -105,6 +105,25 @@ for (let data = 0; data < finances.length; data++){
 } 
 
 
+// Track change in profits from month to month
+let changes = [];
+
+for (let data = 0; data < finances.length -1; data++){
+    let differenceFromMonthToMonth = 0; 
+    
+    // initialize the array of changes with value of the first month since we assume that before that the profit was 0
+    if (data === 0){
+        changes.push(finances[data][1]);
+    } 
+    differenceFromMonthToMonth = finances[data+1][1] - finances[data][1];
+    changes.push(differenceFromMonthToMonth);  
+}
+
+
+
+
+
+
 console.log(
 `Financial Analysis
 ----------------------------
