@@ -119,6 +119,8 @@ for (let data = 0; data < finances.length -1; data++){
     changes.push(differenceFromMonthToMonth);  
 }
 
+// Calculate the average of the changes in Profit/Losses over the entire period.
+let averageChange = changes.reduce((acc, cum) => acc + cum, 0) / totalNumOfMonths;
 
 
 
@@ -129,5 +131,6 @@ console.log(
 ----------------------------
 Total Months: ${totalNumOfMonths}
 Total: $${totalAmount}
+Average  Change: $${averageChange.toFixed(2)}
 `
 )
