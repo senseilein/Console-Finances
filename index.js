@@ -126,11 +126,17 @@ let averageChange = changes.reduce((acc, cum) => acc + cum, 0) / totalNumOfMonth
 // Clone then sort array of changes in order to easily extract the greatest increase in profits and the greatest decrese in losses
 let orderedChanges = [...changes].sort();
 
-console.log(orderedChanges)
-console.log(changes)
+// console.log(orderedChanges)
+// console.log(changes)
 
+// Target the greatest increase in profits (date and amount) over the entire period.
+let greatestIncreaseInProfits = orderedChanges[orderedChanges.length-1];
+let greatestIncreaseInitialIndex= changes.indexOf(greatestIncreaseInProfits);
+// console.log(greatestIncreaseInProfits);
+// console.log("index" + changes.indexOf(greatestIncreaseInProfits));
 
-
+let greatestIncreaseDate = finances[greatestIncreaseInitialIndex][0];
+// console.log(greatestIncreaseDate)
 
 
 console.log(
@@ -139,5 +145,6 @@ console.log(
 Total Months: ${totalNumOfMonths}
 Total: $${totalAmount}
 Average  Change: $${averageChange.toFixed(2)}
+Greatest Increase in Profits: ${greatestIncreaseDate} ($${greatestIncreaseInProfits})
 `
 )
