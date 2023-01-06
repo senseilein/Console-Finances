@@ -98,9 +98,17 @@ var finances = [
 // Each item in the dataset corresponds to 1 month 
 let totalNumOfMonths = finances.length;
 
+// Calculate the net total amount of Profit/Losses over the entire period
+let totalAmount = 0;
+for (let data = 0; data < finances.length; data++){
+    totalAmount += finances[data][1]; 
+} 
+
+
 console.log(
 `Financial Analysis
 ----------------------------
 Total Months: ${totalNumOfMonths}
+Total: $${totalAmount}
 `
 )
