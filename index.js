@@ -1,10 +1,4 @@
-/*
-
-
-
- */
-
-
+// ********** Dataset composed of arrays with two fields, Date and Profit/Losses *********
 var finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
@@ -94,6 +88,7 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+// ********** Financial Analysis **********
 
 // Each item in the dataset corresponds to 1 month 
 let totalNumOfMonths = finances.length;
@@ -129,14 +124,18 @@ let orderedChanges = [...changes].sort();
 // console.log(orderedChanges)
 // console.log(changes)
 
-// Target the greatest increase in profits (date and amount) over the entire period.
+// Get the greatest increase in profits over the entire period.
 let greatestIncreaseInProfits = orderedChanges[orderedChanges.length-1];
 let greatestIncreaseInitialIndex= changes.indexOf(greatestIncreaseInProfits);
-// console.log(greatestIncreaseInProfits);
-// console.log("index" + changes.indexOf(greatestIncreaseInProfits));
-
+// Get the date corresponding to the greatest increase in profits over the entire period.
 let greatestIncreaseDate = finances[greatestIncreaseInitialIndex][0];
-// console.log(greatestIncreaseDate)
+
+// Get the greatest decrease in losses  over the entire period.
+let greatestDecreaseinLosses = orderedChanges[0];
+let greatestDecreaseInitialIndex = changes.indexOf(greatestDecreaseinLosses);
+// Get the date corresponding to greatest decrease in losses over the entire period.
+let greatestDecreaseDate = finances[greatestDecreaseInitialIndex][0];
+
 
 
 console.log(
@@ -146,5 +145,6 @@ Total Months: ${totalNumOfMonths}
 Total: $${totalAmount}
 Average  Change: $${averageChange.toFixed(2)}
 Greatest Increase in Profits: ${greatestIncreaseDate} ($${greatestIncreaseInProfits})
+Greatest Decrease in Profits: ${greatestDecreaseDate} ($${greatestDecreaseinLosses})
 `
 )
