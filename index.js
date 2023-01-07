@@ -114,15 +114,12 @@ for (let data = 0; data < finances.length - 1; data++) {
     changes.push(differenceFromMonthToMonth);
 }
 
-console.log("First changes")
-console.log(changes);
-
 // Calculate the average of the changes in Profit/Losses over the entire period.
 let averageChange = changes.reduce((acc, cum) => acc + cum, 0) / totalNumOfMonths;
 
 
 // Clone then sort array of changes in order to easily extract the greatest increase in profits and the greatest decrese in losses
-let orderedChanges = [...changes].sort((a,b) => a - b); 
+let orderedChanges = [...changes].sort((a, b) => a - b);
 //do not use just sort() without parameters as it sorts elements as string, which results in errors in calculation
 
 
