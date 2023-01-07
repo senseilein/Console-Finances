@@ -67,6 +67,8 @@ No installation needed.
 
 - [How to clone an array in JavaScript](https://www.freecodecamp.org/news/how-to-clone-an-array-in-javascript-1d3183468f6a/), by [Yazeed Bzadough](https://github.com/yazeedb)
 
+- [How to sort an array numerically in JavaScript, by Dr. Derek Austin](https://medium.com/coding-at-dawn/how-to-sort-an-array-numerically-in-javascript-2b22710e3958)
+
 ## 📜 LICENSE
 
 This repository is licensed under the MIT license.
