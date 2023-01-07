@@ -44,7 +44,7 @@ It's done when I can see:
 
 ## 🎨 SCREENSHOT
 
-![Screenshot of the report](./images/Financial%20report%20screenshot%20correction.JPG.JPG)
+![Screenshot of the report](./images/Financial%20report%20screenshot%20correction.JPG)
 
 ## 🔧 TECHNOLOGY USED
 
