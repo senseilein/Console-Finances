@@ -136,15 +136,14 @@ let greatestDecreaseInitialIndex = changes.indexOf(greatestDecreaseinLosses);
 // Get the date corresponding to greatest decrease in losses over the entire period.
 let greatestDecreaseDate = finances[greatestDecreaseInitialIndex][0];
 
-
-
-console.log(
-    `Financial Analysis
+const financialAnalysis =`
+Financial Analysis
 ----------------------------
 Total Months: ${totalNumOfMonths}
 Total: $${totalAmount}
 Average  Change: $${averageChange.toFixed(2)}
 Greatest Increase in Profits: ${greatestIncreaseDate} ($${greatestIncreaseInProfits})
 Greatest Decrease in Profits: ${greatestDecreaseDate} ($${greatestDecreaseinLosses})
-`
-)
+`;
+
+console.log(financialAnalysis);
